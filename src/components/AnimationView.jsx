@@ -5,18 +5,14 @@ const AnimationView = ({ onComplete }) => {
   const [showCircles, setShowCircles] = useState(false);
 
   useEffect(() => {
-    // Show BOUNDLESS text for 7 seconds
     const textTimer = setTimeout(() => {
       setShowBoundless(false);
-      // Start circles animation after 0.5s transition
       setTimeout(() => setShowCircles(true), 500);
-    }, 7000);  // 7 seconds
+    }, 7000);
 
-    // Complete animation after total duration
-    // (7s text + 0.5s transition + 3.5s circles + 5s static)
     const completeTimer = setTimeout(() => {
       onComplete();
-    }, 16000);  // Total duration: 16 seconds
+    }, 16000);
 
     return () => {
       clearTimeout(textTimer);
@@ -24,13 +20,12 @@ const AnimationView = ({ onComplete }) => {
     };
   }, [onComplete]);
 
-  // Colors matched from the images
   const colors = [
-    { color: '#A4BEC8', delay: 0 },     // Light blue
-    { color: '#FF462D', delay: 0.4 },   // Light coral
-    { color: '#B4E5BE', delay: 0.8 },   // Light green
-    { color: '#3D3C3C', delay: 1.2 },   // Dark gray
-    { color: '#29707A', delay: 1.6 }    // Teal
+    { color: '#A4BEC8', delay: 0 },
+    { color: '#FF462D', delay: 0.4 },
+    { color: '#B4E5BE', delay: 0.8 },
+    { color: '#3D3C3C', delay: 1.2 },
+    { color: '#29707A', delay: 1.6 }
   ];
 
   return (

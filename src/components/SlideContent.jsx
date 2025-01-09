@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-// UseCasePoint Component
 const UseCasePoint = ({ x, y, color, label, onSelect }) => {
   return (
     <div 
@@ -16,7 +15,6 @@ const UseCasePoint = ({ x, y, color, label, onSelect }) => {
   );
 };
 
-// Use case details data
 const useCaseDetails = {
   "Automated Document Validation": {
     value: "AI-driven compliance advisory improves query resolution speed by 75%, reducing human error in compliance monitoring",
@@ -48,14 +46,12 @@ const useCaseDetails = {
   }
 };
 
-// SlideContent Component
 const SlideContent = ({ children }) => (
   <div className="max-w-7xl mx-auto px-8 py-12 h-full flex items-center">
     <div className="w-full">{children}</div>
   </div>
 );
 
-// NetworkView Component
 const NetworkView = ({ handleShowNetwork }) => {
   const [selectedUseCase, setSelectedUseCase] = useState(null);
 
@@ -204,9 +200,7 @@ Explore the Network of Customers and Their GenAI Use-Cases
   );
 };
 
-// Main slides export
 export const slides = (handleShowNetwork) => [
-  // Cost slide
   <SlideContent key="cost">
     <div className="flex flex-col items-start">
       <div className="bg-[#E5F4F1] px-4 py-2 rounded-full mb-8">
@@ -276,7 +270,6 @@ export const slides = (handleShowNetwork) => [
     </div>
   </SlideContent>,
 
-  // Journey slide
   <SlideContent key="journey">
     <div className="flex flex-col items-start">
       <div className="bg-[#E5F4F1] px-4 py-2 rounded-full mb-8">
@@ -384,7 +377,6 @@ export const slides = (handleShowNetwork) => [
     </div>
   </SlideContent>,
 
-  // Network slide
   <SlideContent key="network">
     <NetworkView handleShowNetwork={handleShowNetwork} />
   </SlideContent>

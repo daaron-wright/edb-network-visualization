@@ -252,14 +252,12 @@ const ServiceBlueprint = ({ customerName = "EPOS" }) => {
       
       const xDist = current.x - previous.x;
       
-      // Adjustable control points for vertical curves
-      const curveStrength = 0.15;  // Adjust for curve intensity
-      const verticalBias = 0;     // Adjust for vertical displacement
+      const curveStrength = 0.15;
+      const verticalBias = 0;
       
       const cp1x = previous.x + (xDist * curveStrength);
       const cp2x = current.x - (xDist * curveStrength);
       
-      // Add vertical bias for smoother curves
       const cp1y = previous.y - verticalBias;
       const cp2y = current.y - verticalBias;
       

@@ -1,4 +1,3 @@
-// blueprintConfig.js
 export const blueprintConfig = {
     "EPOS": {
       stages: [

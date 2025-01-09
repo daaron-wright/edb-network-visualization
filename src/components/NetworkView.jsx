@@ -111,7 +111,7 @@ const NetworkView = ({ onBackToSlides }) => {
       </div>
 
       {/* Title */}
-      <div className="absolute top-96 left-1/4 z-10 max-w-md">
+      <div className="absolute top-44 left-1/4 z-10 max-w-md">
             <div className="bg-[#E5F4F1] px-4 py-2 rounded-full mb-8">
         Mapping GenAI Enablers Across Relevant Experiences
       </div>
